@@ -52,6 +52,7 @@ nav ul > li{
   display: inline-block;
   padding:12px;
       width: 25%;
+      position: relative;
 }
 nav ul > li img{
   width: 30px;
@@ -65,6 +66,8 @@ nav ul > li:hover img{
 nav ul > li.active img{
     opacity: 1;
 }
+
+
 
 
 .dashboard,
@@ -82,11 +85,14 @@ padding:20px;
 .alert{
   background: #7377bf;
   color:white;
-  padding:10px;
+  padding:12px;
   border-radius: 3px;
+  margin-bottom: 20px;
 }
 .alert span{
 font-weight: bold;
+padding-right: 10px;
+
 }
 
 .social-stats .social-list{
@@ -170,7 +176,7 @@ i {
   border: solid #686cb7;
   border-width: 0 1px 1px 0;
   display: inline-block;
-  padding: 3px;
+  padding: 5px;
 }
 
 .right {
@@ -196,7 +202,7 @@ i {
 /*buttons**/
 
 .btn{
-  padding:15px;
+  padding:12px;
   border-radius: 5px;
   border: 0;
   background: grey;
@@ -228,7 +234,7 @@ i {
 .message-user input,
 .message-user textarea{
   border: 1px solid #ccc;
-  padding: 15px;
+  padding: 12px;
   border-radius: 5px;
   background: #f6f6f6;
     margin-bottom: 15px;
@@ -253,7 +259,7 @@ i {
   width: 100%;
   border: 1px solid #ccc;
 padding: 15px;
-height: 45px;
+height: 40px;
 border-radius: 5px;
 background: #f6f6f6;
 }
@@ -271,6 +277,22 @@ background: #f6f6f6;
   hyphens: auto;
 }
 
+.dashboard-header .dashboard-search input{
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.search { position: relative;}
+.search .fa-search {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  font-size: 15px;
+  color: #5e62bf;
+}
+
 /*Media queries*/
 
 @media only screen and (min-width: 768px) {
@@ -284,12 +306,27 @@ grid-area: nav;
 
 nav ul{
 display: block;
+margin: 15px 0;
 }
 
 nav ul > li {
     display: block;
-    padding: 25px 0 5px 0;
+    padding: 15px 0;
     width: 100%;
+}
+
+nav ul > li.active::before{
+  content: '';
+  border-left: 5px solid #85db80;
+  border-radius: 0 5px 5px 0;
+  height: 100%;
+  position: absolute;
+  left:0;
+  top:0;
+}
+
+.dashboard-header{
+grid-area: dashboard-header;
 }
 
 .dashboard{
@@ -324,6 +361,32 @@ grid-area: message-user;
 grid-area: settings;
 }
 
+.dashboard-header{
+  display: flex;
+}
+
+.dashboard-header .dashboard-title{
+  padding: 20px;
+}
+
+.dashboard-header .dashboard-title h2{
+  margin-bottom: 0;
+}
+
+.dashboard-header .dashboard-search{
+  background: #f8f8f8;
+    padding: 10px 20px 8px 0;
+border-left: 1px solid #e3e3e3;
+border-bottom: 1px solid #e3e3e3;
+flex: 1;
+    text-align: right;
+}
+.search {
+  position: relative;
+  max-width: 350px;
+  float:right;
+width: 100%;
+}
 
 .mobile-users,
 .recent-activity,
@@ -342,6 +405,7 @@ grid-area: settings;
     grid-template-columns: 70px 1fr 1fr;
     grid-template-areas:
 "header header header"
+"nav dashboard-header dashboard-header"
 "nav dashboard dashboard"
 "nav daily-traffic mobile-users"
 "nav social-stats social-stats"
