@@ -45,6 +45,14 @@ var myChart = new Chart(ctx, {
     }
 });
 
+//get navigation items
+
+//if clicked create a new chart and set menu item active
+
+//if menu item is active don't create a new chart on clicked
+
+//maybe use case
+
 
 var ctx2 = document.getElementById('myChart2').getContext("2d");
 var myPieChart = new Chart(ctx2, {

@@ -14,7 +14,7 @@
 <body>
   <div id="container">
     <header>
-      <h1><strong>YourApp</strong> &trade;</h1>
+      <h1>Your<span>App&trade;</span></h1>
     </header>
     <nav>
       <ul>
@@ -28,7 +28,15 @@
     <div class="dashboard" id="dashboard">
       <h2>Dashboard</h2>
       <div class="alert"><span>Alert</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>
+<h2>Traffic</h2>
+      <ul>
+        <li>Hourly</li>
+        <li>Daily</li>
+        <li>Weekly</li>
+        <li>Monthly</li>
+      </ul>
     </div>
+
 
     <div class="daily-traffic" id="daily-traffic" style="min-width:0;/*fix for responsive charts with flex or grid. Discussion here: https://github.com/chartjs/Chart.js/issues/4156*/">
       <h2>Daily Traffic</h2>
@@ -101,22 +109,22 @@
       <ul class="members-list">
         <li>
           <div class="member-img"><img src="images/member-1.jpg"></div>
-          <div class="member-info">Victoria Chambers <br><a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a></div>
+          <div class="member-info">Victoria Chambers <br><a class="email-wrap" href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a></div>
           <div class="member-more">10/15/15</div>
         </li>
         <li>
           <div class="member-img"><img src="images/member-2.jpg"></div>
-          <div class="member-info">Dale Byrd <br><a href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a></div>
+          <div class="member-info">Dale Byrd <br><a class="email-wrap" href="mailto:dale.byrd52@example.com">dale.byrd52@example.com</a></div>
           <div class="member-more">10/15/15</div>
         </li>
         <li>
           <div class="member-img"><img src="images/member-3.jpg"></div>
-          <div class="member-info">Dawn Wood <br><a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a></div>
+          <div class="member-info">Dawn Wood <br><a class="email-wrap" href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a></div>
           <div class="member-more">10/15/15</div>
         </li>
         <li>
           <div class="member-img"><img src="images/member-4.jpg"></div>
-          <div class="member-info">Dan Oliver <br><a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a></div>
+          <div class="member-info">Dan Oliver <br><a class="email-wrap" href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a></div>
           <div class="member-more">10/15/15</div>
         </li>
       </ul>
@@ -160,26 +168,26 @@
     <div class="settings" id="settings">
       <h2>Settings</h2>
 
-      <label class="switch-light switch-ios" style="width: 100px" onclick="">
-              <input type="checkbox">
-
-              <strong>
-                Send Email Notifications
-              </strong>
-
+<div>
+      <span style="margin-right: 20px;">
+        Send Email Notifications
+      </span>
+      <label class="switch-light switch-ios" style="width: 90px; display:inline-block;     vertical-align: middle;" onclick="">
+              <input type="checkbox" checked>
               <span>
                 <span>Off</span>
                 <span>On</span>
                 <a></a>
               </span>
             </label>
+</div>
 
-            <label class="switch-light switch-ios" style="width: 100px" onclick="">
-                    <input type="checkbox">
-
-                    <strong>
-                      Set Profile to Public
-                    </strong>
+<div>
+          <span style="margin-right: 20px;">
+              Set Profile to Public
+            </span>
+            <label class="switch-light switch-ios" style="width: 90px; display:inline-block;     vertical-align: middle;" onclick="">
+                    <input type="checkbox" checked>
 
                     <span>
                       <span>Off</span>
@@ -187,11 +195,11 @@
                       <a></a>
                     </span>
                   </label>
+                </div>
 
 <select>
 <option>Select Timezone</option>
 <option>GMT+1</option>
-
 </select>
 
 

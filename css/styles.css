@@ -11,6 +11,9 @@ body{
   font-size: 1.4rem;
 }
 
+h1 span{
+  font-weight: normal;
+}
 
 h2{
   margin-top: 0;
@@ -221,7 +224,6 @@ i {
 .message-user button{
   display:block;
   width:100%;
-  margin-bottom: 15px;
 }
 .message-user input,
 .message-user textarea{
@@ -229,13 +231,45 @@ i {
   padding: 15px;
   border-radius: 5px;
   background: #f6f6f6;
+    margin-bottom: 15px;
 }
 
 .message-user textarea{
   min-height:100px;
 }
 
+/*Style toggle switch*/
 
+.switch-ios.switch-light input:checked ~ span {
+    border-color: #7377bf !important;
+    box-shadow: inset 0 0 0 30px #7377bf !important;
+}
+.switch-ios.switch-light input:checked ~ span a{
+  border-color: #7377bf !important;
+}
+
+
+.settings select{
+  width: 100%;
+  border: 1px solid #ccc;
+padding: 15px;
+height: 45px;
+border-radius: 5px;
+background: #f6f6f6;
+}
+
+/*wrap email when really long*/
+.email-wrap {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  -ms-word-break: break-all;
+  word-break: break-all;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
 
 /*Media queries*/
 
@@ -322,7 +356,7 @@ justify-content: space-between;
 }
 
 .social-stats .social-list li{
-width:30%;
+width:32%;
 margin-bottom: 0;
 }
 
