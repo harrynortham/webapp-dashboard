@@ -1,0 +1,329 @@
+/*add a normalise.css*/
+* {
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+html{
+   font-size: 62.5%;
+}
+body{
+  margin: 0;
+  font-size: 1.4rem;
+}
+
+
+h2{
+  margin-top: 0;
+  font-size: 1.6rem;
+}
+
+a{
+  color: #7477bf;
+  text-decoration: none;
+}
+a:hover{
+text-decoration: underline;
+}
+
+header{
+  background-color: #686cb7;
+  color: white;
+  padding: 15px;
+}
+header h1{
+  margin: 0;
+}
+nav{
+  background: #444367;
+  text-align: center;
+}
+nav ul{
+margin:0;
+color:white;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+
+}
+nav ul > li{
+  display: inline-block;
+  padding:12px;
+      width: 25%;
+}
+nav ul > li img{
+  width: 30px;
+height: 30px;
+    opacity: .6;
+}
+nav ul > li:hover img{
+  opacity: .8;
+}
+
+nav ul > li.active img{
+    opacity: 1;
+}
+
+
+.dashboard,
+.daily-traffic,
+.mobile-users,
+.social-stats,
+.new-members,
+.recent-activity,
+.message-user,
+.settings{
+padding:20px;
+    border-bottom: 1px solid #ccc;
+}
+
+.alert{
+  background: #7377bf;
+  color:white;
+  padding:10px;
+  border-radius: 3px;
+}
+.alert span{
+font-weight: bold;
+}
+
+.social-stats .social-list{
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+}
+
+.social-stats .social-list li{
+background: #f8f8f8;
+display: block;
+padding:20px;
+margin-bottom: 10px;
+border: 1px solid #e3e3e3;
+border-radius: 3px;
+}
+.social-stats .social-list li:last-child{
+  margin-bottom: 0;
+}
+.social-stats .social-list .social-icon{
+  background: #7377bf;
+  border-radius: 50%;
+  display: inline-block;
+}
+.social-stats .social-list .social-icon .my-svg{
+width:50px;
+padding:10px;
+}
+
+.social-stats .social-list .social-info{
+  display:inline-block;
+  margin-left: 20px;
+  vertical-align: top;
+  color: #7477bf;
+  font-weight: bold;
+}
+.social-stats .social-list .social-info span{
+display: block;
+font-size: 3rem;
+font-weight: normal;
+color: #333;
+}
+
+.members-list{
+  list-style-type: none;
+  margin: 0;
+  padding:0;
+}
+.members-list li{
+display: flex;
+border-bottom: 1px solid #ccc;
+padding: 10px 0;
+}
+.members-list li:last-child{
+border-bottom: 0;
+}
+.members-list .member-img{
+  width:65px;
+  margin-right: 20px;
+}
+.members-list .member-img img{
+border-radius: 50%;
+width: 100%;
+    min-width: 65px;
+vertical-align: top;
+}
+
+.members-list .member-info{
+padding-top: 15px;
+margin-right: 20px;
+}
+
+.members-list .member-more{
+padding-top: 25px;
+margin-left: auto
+}
+
+/*Arrow*/
+
+i {
+  border: solid #686cb7;
+  border-width: 0 1px 1px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+/*buttons**/
+
+.btn{
+  padding:15px;
+  border-radius: 5px;
+  border: 0;
+  background: grey;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+.btn:hover{
+  opacity: .9;
+}
+.btn.btn-primary{
+  background: #7377bf;
+  color: white;
+}
+
+.btn.btn-secondary{
+  background: #b2b2b2;
+  color: white;
+}
+
+
+
+
+.message-user input,
+.message-user textarea,
+.message-user button{
+  display:block;
+  width:100%;
+  margin-bottom: 15px;
+}
+.message-user input,
+.message-user textarea{
+  border: 1px solid #ccc;
+  padding: 15px;
+  border-radius: 5px;
+  background: #f6f6f6;
+}
+
+.message-user textarea{
+  min-height:100px;
+}
+
+
+
+/*Media queries*/
+
+@media only screen and (min-width: 768px) {
+  header{
+grid-area: header;
+}
+
+nav{
+grid-area: nav;
+}
+
+nav ul{
+display: block;
+}
+
+nav ul > li {
+    display: block;
+    padding: 25px 0 5px 0;
+    width: 100%;
+}
+
+.dashboard{
+grid-area: dashboard;
+}
+
+.daily-traffic{
+grid-area: daily-traffic;
+}
+
+.mobile-users{
+grid-area: mobile-users;
+}
+
+.social-stats{
+grid-area: social-stats;
+}
+
+.new-members{
+grid-area: new-members;
+}
+
+.recent-activity{
+grid-area: recent-activity;
+}
+
+.message-user{
+grid-area: message-user;
+}
+
+.settings{
+grid-area: settings;
+}
+
+
+.mobile-users,
+.recent-activity,
+.settings{
+  border-left: 1px solid #ccc;
+}
+
+.message-user,
+.settings{
+  border-bottom: none;
+}
+
+
+  #container {
+    display:grid;
+    grid-template-columns: 70px 1fr 1fr;
+    grid-template-areas:
+"header header header"
+"nav dashboard dashboard"
+"nav daily-traffic mobile-users"
+"nav social-stats social-stats"
+"nav new-members recent-activity"
+"nav message-user settings";
+}
+
+.social-stats .social-list{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+}
+
+.social-stats .social-list li{
+width:30%;
+margin-bottom: 0;
+}
+
+}
