@@ -15,9 +15,18 @@
 <body>
   <div id="container">
     <header>
-      <h1>Your<span>App&trade;</span></h1>
+      <h1>Fend<span>Dev&trade;</span></h1>
       <div class="alerts">
-        <div class="bell">
+
+          <div class="modal">
+              <div class="modal-content">
+                  <span class="close-button"><i class="fas fa-times"></i></span>
+                  <h1>Alerts</h1>
+                  <p>You currently have no new notifications.</p>
+              </div>
+          </div>
+      
+        <div class="bell trigger">
 
             <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve">
@@ -33,7 +42,7 @@
          </svg>
 
         </div>
-        <div class="user"><div class="user-image"><img src="https://avatars1.githubusercontent.com/u/40062105?s=460&v=4"></div>
+        <div class="user"><div class="user-image"><img src="images/40062105.jpeg"></div>
         <div class="user-name">Harry Northam</div>
       </div>
       </div>
@@ -59,14 +68,17 @@
 
     <div class="dashboard" id="dashboard">
 
-      <div class="alert"><span>Alert</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>
-<h2>Traffic</h2>
-      <ul>
-        <li>Hourly</li>
-        <li>Daily</li>
-        <li>Weekly</li>
-        <li>Monthly</li>
+      <div style="display:none;" class="alert"><span>Alert</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<i class="fas fa-times"></i></div>
+<div class="traffic-header">
+      <h2>Traffic</h2>
+      <ul class="traffic-nav">
+        <li><a href="#">Hourly</a></li>
+        <li><a href="#">Daily</a></li>
+        <li><a class="active" href="#">Weekly</a></li>
+        <li><a href="#">Monthly</a></li>
       </ul>
+</div>
+
     </div>
 
 
