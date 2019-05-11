@@ -1,6 +1,5 @@
 //autocomplete for users field
 //I used HTML5s built in automcomplete called datalist
-//https://gomakethings.com/how-to-create-a-form-input-autocomplete-without-a-library-or-framework/
 
 //Message user form
 const messageForm = document.getElementById("message-form");
