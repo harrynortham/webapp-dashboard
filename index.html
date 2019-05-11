@@ -49,10 +49,10 @@
     </header>
     <nav>
       <ul>
-        <li class="active"><a href="#dashboard"><img src="icons/icon-dashboard.svg" alt=""></a></li>
-        <li><a href="#new-members"><img src="icons/icon-members.svg" alt=""></a></li>
-        <li><a href="#daily-traffic"><img src="icons/icon-visits.svg" alt=""></a></li>
-        <li><a href="#settings"><img src="icons/icon-settings.svg" alt=""></a></li>
+        <li class="active"><a href="#"><img src="icons/icon-dashboard.svg" alt=""></a></li>
+        <li><a href="#"><img src="icons/icon-members.svg" alt=""></a></li>
+        <li><a href="#"><img src="icons/icon-visits.svg" alt=""></a></li>
+        <li><a href="#"><img src="icons/icon-settings.svg" alt=""></a></li>
       </ul>
     </nav>
 
@@ -68,18 +68,25 @@
 
     <div class="dashboard" id="dashboard">
 
-      <div style="display:none;" class="alert"><span>Alert</span> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.<i class="fas fa-times"></i></div>
+      <div style="display:none;" class="alert"><span>Alert</span> You forgot to praise Harry for his great work on the dashboard project.<i class="fas fa-times"></i></div>
 <div class="traffic-header">
       <h2>Traffic</h2>
       <ul class="traffic-nav">
-        <li><a href="#">Hourly</a></li>
-        <li><a href="#">Daily</a></li>
-        <li><a class="active" href="#">Weekly</a></li>
-        <li><a href="#">Monthly</a></li>
+        <li><a id="hourlyTrafficChart" href="#">Hourly</a></li>
+        <li><a id="dailyTrafficChart" href="#">Daily</a></li>
+        <li><a id="weeklyTrafficChart" href="#">Weekly</a></li>
+        <li><a id="monthlyTrafficChart" href="#">Monthly</a></li>
       </ul>
 </div>
 
-    </div>
+
+<div class="traffic-all" id="traffic-all" style="min-width:0;/*fix for responsive charts with flex or grid. Discussion here: https://github.com/chartjs/Chart.js/issues/4156*/">
+  <div class="chart-container"  style="position: relative; height: 320px">
+  <canvas id="myChart3"></canvas>
+</div>
+</div>
+
+    </div> <!--end dashboard-->
 
 
     <div class="daily-traffic" id="daily-traffic" style="min-width:0;/*fix for responsive charts with flex or grid. Discussion here: https://github.com/chartjs/Chart.js/issues/4156*/">
