@@ -22,7 +22,10 @@
               <div class="modal-content">
                   <span class="close-button"><i class="fas fa-times"></i></span>
                   <h1>Alerts</h1>
-                  <p>You currently have no new notifications.</p>
+                  <div class="alerts-list">
+                 
+                  </div>
+                  
               </div>
           </div>
       
@@ -224,7 +227,7 @@
         Send Email Notifications
       </span>
       <label class="switch-light switch-ios" onclick="">
-              <input type="checkbox" checked>
+              <input type="checkbox" id="email-switch">
               <span>
                 <span>Off</span>
                 <span>On</span>
@@ -237,8 +240,8 @@
     <span class="switch-span"">
               Set Profile to Public
             </span>
-            <label class="switch-light switch-ios" onclick="">
-                    <input type="checkbox" checked>
+            <label class="switch-light switch-ios profile-switch" onclick="">
+                    <input type="checkbox" id="profile-switch">
 
                     <span>
                       <span>Off</span>
@@ -249,10 +252,11 @@
                 </div>
 
                 <div class="settings-item">
-<select>
-  <div class="settings-item">
-<option>Select Timezone</option>
-<option>GMT+1</option>
+<select id="timezone-dropdown">
+<option class="default" value="default">Select Timezone</option>
+<option class="gmt1" value="gmt1">GMT+1</option>
+<option class="gmt2" value="gmt2">GMT+2</option>
+<option class="gmt3" value="gmt3">GMT+3</option>
 </select>
 </div>
 <div class="settings-item settings-buttons">

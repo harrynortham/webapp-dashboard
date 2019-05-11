@@ -1,3 +1,52 @@
+//Save settings to local storage
+
+const emailSwitch = document.getElementById("email-switch");
+const profileSwitch = document.getElementById("profile-switch");
+const timezoneDropdown = document.getElementById("timezone-dropdown");
+
+const emailCheckedStorage = localStorage.getItem("emailChecked");
+const profileCheckedStorage = localStorage.getItem("profileChecked");
+const timezoneStorage = localStorage.getItem("timezone");
+
+const dropdownItem = timezoneDropdown.getElementsByTagName("option");
+
+if (emailCheckedStorage === "true") {
+  emailSwitch.setAttribute("checked", "");
+} else {
+  emailSwitch.removeAttribute("checked");
+}
+
+if (profileCheckedStorage === "true") {
+  profileSwitch.setAttribute("checked", "");
+} else {
+  profileSwitch.removeAttribute("checked");
+}
+
+emailSwitch.addEventListener("click", () => {
+  const isEmailChecked = emailSwitch.checked;
+  localStorage.setItem("emailChecked", isEmailChecked);
+});
+
+profileSwitch.addEventListener("click", () => {
+  const isProfileChecked = profileSwitch.checked;
+  localStorage.setItem("profileChecked", isProfileChecked);
+});
+
+timezoneDropdown.addEventListener("mouseout", () => {
+  const timezoneDropdownVal = timezoneDropdown.value;
+  localStorage.setItem("timezone", timezoneDropdownVal);
+});
+
+for (let i = 0; i < dropdownItem.length; ++i) {
+  //console.log("item");
+  //console.log(timezoneStorage);
+  console.log(dropdownItem[i]);
+  if (dropdownItem[i].classList.contains(timezoneStorage)) {
+    console.log("contains");
+    dropdownItem[i].setAttribute("selected", "");
+  }
+}
+
 //Make alert box hideable
 
 const alert = document.querySelector(".alert");
@@ -31,6 +80,26 @@ closeButton.addEventListener("click", () => {
 trigger.addEventListener("click", () => {
   toggleModal();
 });
+
+//modal alerts
+
+const alertsList = document.querySelector(".alerts-list");
+const ul = document.createElement("ul");
+
+var alertItem = {
+  1: "You forgot to tie your laces",
+  2: "Neighbour called, he wants his dog back",
+  3: "The flight to mars has departed"
+};
+
+Object.keys(alertItem).forEach(function(item) {
+  let li = document.createElement("li");
+  let node = document.createTextNode(alertItem[item]);
+  li.appendChild(node);
+  ul.appendChild(li);
+});
+
+alertsList.appendChild(ul);
 
 //charts
 
@@ -263,6 +332,8 @@ const monthlyTrafficChart = {
 
 new Chart(ctx3, hourlyTrafficChart);
 document.querySelector("#hourlyTrafficChart").classList.add("active");
+
+//Switch between charts using navigation
 
 const trafficNav = document.querySelector(".traffic-nav");
 
