@@ -1,3 +1,19 @@
+//Message user form
+const messageForm = document.getElementById("message-form");
+const userInput = document.getElementById("user-input");
+const messageTextarea = document.getElementById("message-textarea");
+
+messageForm.addEventListener("submit", () => {
+  event.preventDefault();
+  if (userInput.value === "") {
+    window.alert("Please enter a users name");
+  } else if (messageTextarea.value === "") {
+    window.alert("Please enter a message");
+  } else {
+    window.alert("Thanks! Your message has been submitted");
+  }
+});
+
 //Save settings to local storage
 
 const emailSwitch = document.getElementById("email-switch");
