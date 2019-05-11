@@ -1,3 +1,7 @@
+//autocomplete for users field
+//I used HTML5s built in automcomplete called datalist
+//https://gomakethings.com/how-to-create-a-form-input-autocomplete-without-a-library-or-framework/
+
 //Message user form
 const messageForm = document.getElementById("message-form");
 const userInput = document.getElementById("user-input");
@@ -5,7 +9,9 @@ const messageTextarea = document.getElementById("message-textarea");
 
 messageForm.addEventListener("submit", () => {
   event.preventDefault();
-  if (userInput.value === "") {
+  if (userInput.value === "" && messageTextarea.value === "") {
+    window.alert("Please enter a users name and fill in the message textarea");
+  } else if (userInput.value === "") {
     window.alert("Please enter a users name");
   } else if (messageTextarea.value === "") {
     window.alert("Please enter a message");
@@ -56,9 +62,9 @@ timezoneDropdown.addEventListener("mouseout", () => {
 for (let i = 0; i < dropdownItem.length; ++i) {
   //console.log("item");
   //console.log(timezoneStorage);
-  console.log(dropdownItem[i]);
+  //console.log(dropdownItem[i]);
   if (dropdownItem[i].classList.contains(timezoneStorage)) {
-    console.log("contains");
+    //console.log("contains");
     dropdownItem[i].setAttribute("selected", "");
   }
 }
@@ -378,3 +384,5 @@ trafficNav.addEventListener("click", e => {
     toggleActive(linkId);
   }
 });
+
+console.log("Thanks for reviewing my project! ");
